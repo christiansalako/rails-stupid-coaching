@@ -1,9 +1,17 @@
 
-<h1>Stupid coaching</h1>
+<h1>Stupid Coaching</h1>
 
-<%= @question %>
-<br>
-<br>
-<br>
+<div class="user">
+<p> &nbsp;&nbsp;<%= @user_input %> </p>
+<p> &nbsp;&nbsp;&nbsp;-You</p>
+</div>
 
-<%= link_to 'Ask a new question', '/ask' %>
+
+<div class="coach">
+  <h3> &nbsp;&nbsp;<%= @coach_answer %> </h3>
+  <p>&nbsp;&nbsp;&nbsp;-Your coach </p>
+</div>
+
+<br>
+<br>
+<p><%= link_to "Ask Another Question", ask_path %></p>

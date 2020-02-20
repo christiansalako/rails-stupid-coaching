@@ -3,13 +3,17 @@ class QuestionsController < ApplicationController
   end
 
   def answer
-    @question = params[:question]
-    if @question == 'I am going to work'
-      @question = 'Great!'
-    elsif @question.include? '?'
-      @question = 'Silly question, get dressed and go to work!'
+    @user_input = params[:Question]
+    @coach_answer = 'Great!'
+    @coach_answer2 = 'Silly question, get dressed and go to work!'
+    @coach_answer3 = "I don't care, get dressed and go to work!"
+
+    if @user_input.include? '?'
+      @coach_answer = @coach_answer2
+    elsif @user_input == 'I am goin to work'
+      @coach_answer
     else
-      @question = 'I don\'t care, get dressed and go to work!'
+      @coach_answer = @coach_answer3
     end
   end
 
